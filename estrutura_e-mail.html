@@ -1,0 +1,124 @@
+<div style="font-family: Arial, Helvetica, sans-serif; max-width: 700px; margin: auto; border: 1px solid #d4d4d4; background-color: #ffffff;">
+
+    <div style="background-color: #003b5c; text-align: center; padding: 30px 0;">
+        <h1 style="margin: 0; font-size: 28px; color: #d4a017; font-weight: bold; letter-spacing: 1px;">PlataformaGestao</h1>
+    </div>
+
+    <div style="padding: 20px 40px; border-bottom: 1px solid #f0f0f0; background-color: #ffffff;">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <img src="https://placehold.co/120x40?text=Seguradora+Cliente" alt="Seguradora Cliente" width="120" style="width: 120px; max-width: 120px; height: auto; display: block; border: none;">
+                </td>
+                
+                <td>
+                    <div style="border-left: 1px solid #dcdcdc; height: 40px; margin: 0 auto; margin-left: 20px; margin-right: 20px;"></div>
+                </td>
+                
+                <td>
+                    <img src="https://placehold.co/150x40?text=Empresa+Operadora" alt="Empresa Operadora" width="150" style="width: 150px; max-width: 150px; height: auto; display: block; border: none;">
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <div style="background-color: @{if(triggerBody()?['sucesso'], '#e6f4ea', '#fce8e6')}; color: @{if(triggerBody()?['sucesso'], '#1e8e3e', '#d93025')}; padding: 15px 30px; font-weight: bold; font-size: 16px; text-align: center; border-bottom: 1px solid #e0e0e0;">
+        @{if(triggerBody()?['sucesso'], 'Acionamento Cadastrado com Sucesso', 'Falha no Acionamento')}
+    </div>
+
+    <div style="padding: 30px;">
+        <p style="color: #333333; font-size: 15px; line-height: 1.6; margin-top: 0;">
+            Prezado(a), seguem os dados do processo recepcionado via integração da <strong>@{triggerBody()?['cia']}</strong>:
+        </p>
+
+        <h3 style="color: #c00000; font-size: 16px; margin-top: 30px; margin-bottom: 15px; font-weight: bold;">
+            Dados do Acionamento
+        </h3>
+
+        <table border="0" cellspacing="0" cellpadding="0" style="font-size: 15px; color: #333333; line-height: 2.0; width: 100%;">
+            <tbody>
+            <tr>
+                <td style="width: 250px; font-weight: bold;">Sinistro:</td>
+                <td>@{triggerBody()?['sinistro']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Placa:</td>
+                <td>@{triggerBody()?['placa']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Chassi:</td>
+                <td>@{triggerBody()?['chassi']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">UF:</td>
+                <td>@{triggerBody()?['uf']}</td>
+            </tr>
+
+            <tr>
+                <td style="font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 10px; margin-top: 10px;">Lançamento no Portal:</td>
+                <td style="border-top: 1px solid #f0f0f0; padding-top: 10px; margin-top: 10px;">@{triggerBody()?['data_portal']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Captura (Robô):</td>
+                <td>@{triggerBody()?['data']} às @{triggerBody()?['hora']}</td>
+            </tr>
+
+            <tr>
+                <td style="font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 10px;">Segurado:</td>
+                <td style="border-top: 1px solid #f0f0f0; padding-top: 10px;">@{triggerBody()?['nome_segurado']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">E-mail Segurado:</td>
+                <td>@{triggerBody()?['email_segurado']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Telefone Segurado:</td>
+                <td>@{triggerBody()?['telefone_segurado']}</td>
+            </tr>
+
+            <tr>
+                <td style="font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 10px;">Corretor:</td>
+                <td style="border-top: 1px solid #f0f0f0; padding-top: 10px;">@{triggerBody()?['nome_corretor']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">E-mail Corretor:</td>
+                <td>@{triggerBody()?['email_corretor']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Telefone Corretor:</td>
+                <td>@{triggerBody()?['telefone_corretor']}</td>
+            </tr>
+            
+            <tr>
+                <td style="font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 10px;">Analista Seguradora:</td>
+                <td style="border-top: 1px solid #f0f0f0; padding-top: 10px;">@{triggerBody()?['nome_analista_seguradora']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">E-mail Analista Seguradora:</td>
+                <td>@{triggerBody()?['email_analista_seguradora']}</td>
+            </tr>
+
+            <tr>
+                <td style="font-weight: bold; border-top: 1px solid #f0f0f0; padding-top: 10px;">Analista Responsável no GD:</td>
+                <td style="border-top: 1px solid #f0f0f0; padding-top: 10px;">@{triggerBody()?['nome_analista_operadora']}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">E-mail Analista GD:</td>
+                <td>@{triggerBody()?['email_analista_operadora']}</td>
+            </tr>
+        </tbody></table>
+
+        <h3 style="color: #c00000; font-size: 16px; margin-top: 35px; margin-bottom: 15px; font-weight: bold;">
+            Retorno da API
+        </h3>
+
+        <div style="font-size: 14px; color: #333333; background-color: #f5f5f5; padding: 15px; border-radius: 4px; border-left: 4px solid @{if(triggerBody()?['sucesso'], '#1e8e3e', '#d93025')};">
+            @{triggerBody()?['mensagem_api']}
+        </div>
+    </div>
+
+    <div style="background-color: #f9f9f9; padding: 20px 30px; text-align: center; font-size: 12px; color: #777777; border-top: 1px solid #eeeeee;">
+        <i>Este processo foi realizado de forma 100% automatizada por um Robô (RPA).</i><br><br>
+        Por favor, não responda a este e-mail.
+    </div>
+</div>

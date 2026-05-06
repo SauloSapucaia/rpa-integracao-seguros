@@ -1,0 +1,32 @@
+# ============================================================
+# SEGURANÇA — NUNCA VERSIONE ESTES ARQUIVOS
+# ============================================================
+
+# Variáveis de ambiente (credenciais, tokens, URLs de produção)
+.env
+*.env
+.env.local
+.env.production
+
+# Ambientes virtuais Python
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs e outputs locais
+*.log
+logs/
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db

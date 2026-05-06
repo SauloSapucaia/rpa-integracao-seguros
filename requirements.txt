@@ -1,0 +1,7 @@
+pandas==2.2.1
+requests==2.31.0
+pyodbc==5.1.0
+SQLAlchemy==2.0.28
+azure-identity==1.15.0
+python-dotenv==1.0.1
+pytz==2024.1
