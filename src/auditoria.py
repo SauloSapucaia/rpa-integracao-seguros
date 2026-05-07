@@ -1,9 +1,9 @@
 import time
 import sys
 from sqlalchemy import text
-import database
-from database import obter_engine
-from portal_seguradora_api import PortalSeguradoraAPI
+from . import database
+from .database import obter_engine
+from .portal_seguradora_api import PortalSeguradoraAPI
 
 def executar_auditoria_semanal():
     print("\n[MODO AUDITORIA] Iniciando varredura de processos antigos e ociosos...")

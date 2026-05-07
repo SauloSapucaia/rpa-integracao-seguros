@@ -6,12 +6,12 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import datetime
 import logging
-import config
-import database
-import auditoria
-from portal_seguradora_api import extrair_portal_seguradora
-from sinistro_api import PlataformaGestaoAPI
-from funcoes_auxiliares import calcular_data_agendamento, consertar_uf_linha, obter_agora_br
+from src import config
+from src import database
+from src import auditoria
+from src.portal_seguradora_api import extrair_portal_seguradora
+from src.sinistro_api import PlataformaGestaoAPI
+from src.funcoes_auxiliares import calcular_data_agendamento, consertar_uf_linha, obter_agora_br
 
 #%%
 def executar_robo():

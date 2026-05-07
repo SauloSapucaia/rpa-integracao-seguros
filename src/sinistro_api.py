@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
-import database
-from funcoes_auxiliares import obter_agora_br
+from . import database
+from .funcoes_auxiliares import obter_agora_br
 import re
 
 class PlataformaGestaoAPI:

@@ -5,10 +5,10 @@ import pyodbc
 import json
 import warnings
 from sqlalchemy import create_engine, text
-from funcoes_auxiliares import tratar_valor_fipe
+from .funcoes_auxiliares import tratar_valor_fipe
 # from azure.identity import InteractiveBrowserCredential               # 09/03/2026 - MOVIDO PARA A FUNÇÃO obter_engine() PARA RODAR NA NUVEM (FABRIC MICROSOFT)
 # from azure.identity import DefaultAzureCredential                     # 09/03/2026 - MOVIDO PARA A FUNÇÃO obter_engine() PARA RODAR NA NUVEM (FABRIC MICROSOFT)
-from config import FABRIC_SERVER, FABRIC_DATABASE
+from .config import FABRIC_SERVER, FABRIC_DATABASE
 
 # Silencia avisos técnicos de segurança do MSAL no terminal
 warnings.filterwarnings("ignore", category=UserWarning, module="msal.oauth2cli.oauth2")
